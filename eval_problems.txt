@@ -1,0 +1,74 @@
+1)  Write a Python program that accepts a string containing a mathematical expression and a dictionary of variables. The program should evaluate the expression only using the variables in the dictionary.
+ expression = "a + b * c"
+ variables = {"a": 4, "b": 2, "c": 3}
+ output= 10
+
+2)Problem Statement: Write a Python program that takes a JSON string representing an inventory of items and evaluates a conditional expression. The expression will check whether certain items' quantities are above a threshold and calculate the result accordingly.
+
+Example Input:
+
+json
+
+{
+  "item1": 50,
+  "item2": 30,
+  "item3": 100
+}
+Expression: "item1 if item1 > 40 else item2"
+
+Output:
+50
+
+
+3) You are given a list of dictionaries where each dictionary represents a product with its name and price. Write a program that:
+
+Creates a lambda function to apply a discount of 10% to the price of each product.
+Use eval() to evaluate an expression that applies this lambda function to the product list.
+Output the list of products with the updated prices after applying the discount.
+Example Input:
+
+json
+
+[
+    {"name": "apple", "price": 30},
+    {"name": "banana", "price": 20},
+    {"name": "cherry", "price": 50}
+]
+Expression: "list(map(lambda x: {'name': x['name'], 'price': round(x['price'] * 0.9, 2)}, products))"
+
+Expected Output:
+
+json
+[
+    {"name": "apple", "price": 27.0},
+    {"name": "banana", "price": 18.0},
+    {"name": "cherry", "price": 45.0}
+]
+
+###################################################################
+
+4) Objective: You are given a Python class with a method that needs to be updated dynamically (i.e., monkey patched) to alter its behavior. Write a Python program that demonstrates how to use monkey patching to change the method of a class at runtime.
+
+Problem Statement:
+You have a Car class with a method start_engine() that prints a simple message: "Engine started!". Your task is to:
+
+Dynamically modify the start_engine() method to print "Engine started with a roar!" instead of the original message.
+Use monkey patching to change the behavior of start_engine() at runtime.
+
+Class Definition:
+python:- 
+
+class Car:
+    def start_engine(self):
+        print("Engine started!")
+
+Expected Output:
+
+# Before patching
+car = Car()
+car.start_engine()
+# Output: Engine started!
+
+# After patching
+car.start_engine()
+# Output: Engine started with a roar!
